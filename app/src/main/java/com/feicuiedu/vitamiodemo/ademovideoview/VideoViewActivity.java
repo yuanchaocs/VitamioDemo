@@ -7,6 +7,7 @@ import com.feicuiedu.vitamiodemo.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
@@ -19,6 +20,7 @@ public class VideoViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_view);
         ButterKnife.bind(this);
+        Vitamio.isInitialized(this);
         videoView.setVideoPath(getTestVideo());
         videoView.setMediaController(new MediaController(this));
         videoView.start();

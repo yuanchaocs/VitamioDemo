@@ -10,6 +10,7 @@ import com.feicuiedu.vitamiodemo.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 
@@ -33,6 +34,7 @@ public class VideoBufferActivity extends AppCompatActivity implements
     }
 
     private void playVideo() {
+        Vitamio.isInitialized(this);
         videoView.setVideoPath(getTestVideo());
         videoView.setMediaController(new MediaController(this));
         // 为了能监听出它的一个缓冲状态,我们要做一系列监听工作

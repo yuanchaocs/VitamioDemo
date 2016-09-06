@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         minSdkVersion 11
-        targetSdkVersion 23
+        targetSdkVersion 19
     }
     sourceSets {
         main {
